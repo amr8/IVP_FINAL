@@ -1,0 +1,50 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - Base64Tools (0.0.1)
+  - GPUImage (0.1.7)
+  - JGProgressHUD (2.0.3)
+  - OpenCV (3.4.1)
+  - TesseractOCRiOS (4.0.0)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - Base64Tools
+  - GPUImage (~> 0.1)
+  - JGProgressHUD
+  - OpenCV
+  - TesseractOCRiOS (= 4.0.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - Base64Tools
+    - GPUImage
+    - JGProgressHUD
+    - OpenCV
+    - TesseractOCRiOS
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Base64Tools: 5e32bc7f15839b444a9a818fa37b64106b368c2d
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
+  OpenCV: 533d4b33a02bd225c49838901db2a1ddb6efe6b1
+  TesseractOCRiOS: 90638afbe43d082433f2e76b384c7901d23956df
+
+PODFILE CHECKSUM: 78f2dec0cdfb5804e544c1f29682d7b23e6ee43f
+
+COCOAPODS: 1.5.0

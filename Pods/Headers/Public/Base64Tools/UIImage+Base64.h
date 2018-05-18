@@ -1,0 +1,1 @@
+../../../Base64Tools/Base64Tools/UIImage+Base64.h

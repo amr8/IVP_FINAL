@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="qw3-2P-XpI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="vN6-y3-iiM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="555"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Yw3-3l-c5g"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYg-pw-lNU">
+                                <rect key="frame" x="150" y="575" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="camera-icon.png"/>
+                                <connections>
+                                    <action selector="btnCameraClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="28b-8X-17r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFQ-yd-wGT">
+                                <rect key="frame" x="300" y="595" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="share.png"/>
+                                <connections>
+                                    <action selector="btnShareClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tw0-pZ-3Y4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="blurredImageView" destination="qw3-2P-XpI" id="OfD-AR-eCj"/>
+                        <outlet property="myButton" destination="hYg-pw-lNU" id="FQC-Kx-wCH"/>
+                        <outlet property="myTextView" destination="vN6-y3-iiM" id="PVG-FI-Khg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="117.39130434782609"/>
+        </scene>
+        <!--Crop View Controller-->
+        <scene sceneID="fmz-9h-1hp">
+            <objects>
+                <viewController storyboardIdentifier="crop" id="G8e-5I-gRC" customClass="CropViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s3t-GS-vw6"/>
+                        <viewControllerLayoutGuide type="bottom" id="pGf-ru-0ib"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsm-Uh-zY0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vwi-jK-3Aq">
+                                <rect key="frame" x="0.0" y="599" width="375" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPA-jN-gf2">
+                                        <rect key="frame" x="327" y="20" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="biq-13-51t"/>
+                                            <constraint firstAttribute="width" constant="40" id="sEK-bi-Mf2"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cropAction:" destination="G8e-5I-gRC" eventType="touchUpInside" id="oeD-TV-Jzn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9n-Dc-6PS">
+                                        <rect key="frame" x="8" y="20" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="MO7-6H-rC3"/>
+                                            <constraint firstAttribute="width" constant="40" id="lBE-Tz-Bcy"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismissAction:" destination="G8e-5I-gRC" eventType="touchUpInside" id="qcM-su-WNb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmb-QW-g21">
+                                        <rect key="frame" x="272" y="20" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="C9O-9k-Xcb"/>
+                                            <constraint firstAttribute="width" constant="40" id="fzQ-rE-ea3"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="leftRotateAction:" destination="G8e-5I-gRC" eventType="touchUpInside" id="CuB-Y4-lkh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iac-ZH-dJR">
+                                        <rect key="frame" x="71" y="20" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="J89-k3-ucF"/>
+                                            <constraint firstAttribute="height" constant="40" id="jHz-dl-fAO"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rightRotateAction:" destination="G8e-5I-gRC" eventType="touchUpInside" id="chU-K5-Ngi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdu-hV-0tM">
+                                        <rect key="frame" x="155" y="8" width="65" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <state key="normal" image="CropDone">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="completeAction:" destination="G8e-5I-gRC" eventType="touchUpInside" id="giz-RO-UYG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.67450980392156867" green="0.1803921568627451" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="3aN-af-ZUY"/>
+                                    <constraint firstAttribute="trailing" secondItem="KPA-jN-gf2" secondAttribute="trailing" constant="8" id="EgH-WD-2Vs"/>
+                                    <constraint firstItem="KPA-jN-gf2" firstAttribute="leading" secondItem="gmb-QW-g21" secondAttribute="trailing" constant="15" id="SDi-jW-HLl"/>
+                                    <constraint firstAttribute="bottom" secondItem="KPA-jN-gf2" secondAttribute="bottom" constant="8" id="TlT-Ul-5ev"/>
+                                    <constraint firstAttribute="bottom" secondItem="iac-ZH-dJR" secondAttribute="bottom" constant="8" id="UQp-8h-rUA"/>
+                                    <constraint firstItem="F9n-Dc-6PS" firstAttribute="leading" secondItem="Vwi-jK-3Aq" secondAttribute="leading" constant="8" id="WBn-so-V0E"/>
+                                    <constraint firstItem="iac-ZH-dJR" firstAttribute="leading" secondItem="F9n-Dc-6PS" secondAttribute="trailing" constant="23" id="WTm-sY-jn9"/>
+                                    <constraint firstAttribute="bottom" secondItem="F9n-Dc-6PS" secondAttribute="bottom" constant="8" id="ZT8-Al-4yN"/>
+                                    <constraint firstAttribute="bottom" secondItem="gmb-QW-g21" secondAttribute="bottom" constant="8" id="dob-SS-ntd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pGf-ru-0ib" firstAttribute="top" secondItem="Vwi-jK-3Aq" secondAttribute="bottom" id="7nN-J6-KPS"/>
+                            <constraint firstAttribute="trailing" secondItem="Vwi-jK-3Aq" secondAttribute="trailing" id="FmT-qR-6r7"/>
+                            <constraint firstItem="Vwi-jK-3Aq" firstAttribute="leading" secondItem="tsm-Uh-zY0" secondAttribute="leading" id="zSO-fb-XAN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xDc-G5-ugP"/>
+                    </view>
+                    <connections>
+                        <outlet property="cropBut" destination="KPA-jN-gf2" id="yfX-6n-FzW"/>
+                        <outlet property="dismissBut" destination="F9n-Dc-6PS" id="i29-19-24Q"/>
+                        <outlet property="leftRotateBut" destination="gmb-QW-g21" id="q9a-na-Ghz"/>
+                        <outlet property="rightRotateBut" destination="iac-ZH-dJR" id="dxv-Tb-YDV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CBW-HT-U8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="801" y="117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1.png" width="1271" height="1920"/>
+        <image name="CropDone" width="375" height="300"/>
+        <image name="camera-icon.png" width="256" height="256"/>
+        <image name="share.png" width="128" height="128"/>
+    </resources>
+</document>
